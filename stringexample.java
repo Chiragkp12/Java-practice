@@ -182,12 +182,36 @@ public static void printSubstring(String str){
     }
 }
 
+//check if the given string s2 is present in s1 or not without inbuilt method
+public static void checkSubstringPresent(String s1, String s2){
+    int i = 0;
+    int j = 0;
+    while(i < s1.length() && j < s2.length()){
+        if(s1.charAt(i) == s2.charAt(j)){
+            j++;
+        }
+        else{
+            j = 0;
+        }
+        i++;
+    }
+    if(j == s2.length()){
+        System.out.println("Yes");
+    }
+    else{
+        System.out.println("No");
+    }
+}
+
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string: ");
-        String str = sc.nextLine();
+        System.out.println("Enter the main string: ");
+        String s1 = sc.nextLine();
+        System.out.println("Enter the substring to search: ");
+        String s2 = sc.nextLine();
 
-        printSubstring(str);
+        checkSubstringPresent(s1, s2);
 
         sc.close();
 
