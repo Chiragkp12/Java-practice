@@ -22,6 +22,7 @@ class Test2 extends Test1{
     }
 
     public Test2(int x, int y){
+        super(x,y); // Call the superclass constructor with default values
         this.x = x;
         this.y = y;
     }
@@ -40,6 +41,7 @@ public class day14II{
     public static void main(String[] args) {
         Test2 t = new Test2(9,99);
         t.display();
+        System.out.println();
 
         Test2 t2 = new Test2();
         t2.display();
