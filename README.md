@@ -13,3 +13,4 @@ changes
 use the package name specifically for the folder name you are using 
 create a correct core package that holds the byte code and detail of the project
 
+In the main method confirm the class name is same as the file name to avoid errors caused by the compiled
